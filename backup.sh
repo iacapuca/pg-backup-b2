@@ -47,8 +47,8 @@ fi
 export PGPASSWORD=$POSTGRES_PASSWORD
 POSTGRES_HOST_OPTS="-h $POSTGRES_HOST -p $POSTGRES_PORT -U $POSTGRES_USER $POSTGRES_EXTRA_OPTS"
 
-remoteFilename="${DB_DATABASE}_$(date '+%Y-%m-%d_%Hh%M').sql.gz"
-remoteFilePath="${DB_DATABASE}/$(date '+%Y')/$(date '+%B')/$(date '+%d')/${remoteFilename}"
+remoteFilename="${POSTGRES_DATABASE}_$(date '+%Y-%m-%d_%Hh%M').sql.gz"
+remoteFilePath="${POSTGRES_DATABASE}/$(date '+%Y')/$(date '+%B')/$(date '+%d')/${remoteFilename}"
 
 echo "Creating dump of ${POSTGRES_DATABASE} database from ${POSTGRES_HOST}..."
 

@@ -1,7 +1,7 @@
 FROM alpine:3.13
 LABEL maintainer="Pedro Paes <plpbs@poli.br>"
 
-RUN apk add --no-cache postgresql curl bash python3 py3-pip openssl && \
+RUN apk add --no-cache postgresql-client curl bash python3 py3-pip openssl && \
     rm -rf /var/cache/apk/* && \
     pip3 install b2; \
     curl -L --insecure https://github.com/odise/go-cron/releases/download/v0.0.6/go-cron-linux.gz | zcat > /usr/local/bin/go-cron; \
