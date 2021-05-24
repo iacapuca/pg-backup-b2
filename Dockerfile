@@ -1,4 +1,4 @@
-FROM alpine:3.9
+FROM alpine:3.13
 LABEL maintainer="Pedro Paes <plpbs@poli.br>"
 
 RUN apk add --no-cache postgresql curl bash python3 py3-pip openssl && \
